@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Smart Pa.4942c17e\\x64\\Debug\\DisplayPartner.obj",
+            "outputs": [
+                "Smart Pa.4942c17e\\x64\\Debug\\DisplayPartner.cpp.obj.dt.module.json",
+                "Smart Pa.4942c17e\\x64\\Debug\\DisplayPartner.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
