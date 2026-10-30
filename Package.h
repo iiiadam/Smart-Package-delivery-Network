@@ -16,8 +16,6 @@ namespace Utils {
 	bool validateTrackingID(int a);
 }
 
-
-
 class Package {
 private:
 	int id;
@@ -31,19 +29,21 @@ public:
 
 	void setid(int a);
 
-	void getrecipientName(char a[]);
+	void getRecipientName(char a[]);
 
-	void setrecipientName(char a[]);
+	void setRecipientName(char a[]);
 
 	const char* printrecipientName();
 
-	Date getshippingDate();
+	int getshippingDateday();
+	int getshippingDatemonth();
+	int getshippingDateyear();
 
 	void setshippingDate(Date a);
 
-	double getdeliveryCost();
+	double getDeliveryCost();
 
-	void setdeliveryCost(double a);
+	void setDeliveryCost(double a);
 
 	void updateCost(double* cost);
 
@@ -53,11 +53,9 @@ public:
 
 	~Package();
 
-	
-	
-	friend ostream& operator<<(ostream& out, const Package& p);//------------
+	friend ostream& operator<<(ostream& out, const Package& p);
 
-	friend istream& operator>>(istream& in, Package& p);//-----------
+	friend istream& operator>>(istream& in, Package& p);
 };
 
 #endif

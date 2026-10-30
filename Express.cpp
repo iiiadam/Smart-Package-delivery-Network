@@ -4,9 +4,9 @@ using namespace std;
 
 Express::Express(int a, char b[50], Date c, double d, const char* e, const char* f, int g) {
 	setid(a);
-	setrecipientName(b);
+	setRecipientName(b);
 	setshippingDate(c);
-	setdeliveryCost(d);
+	setDeliveryCost(d);
 	setpartnerName(e);
 	setcity(f);
 	setpriorityLevel(g);
@@ -22,13 +22,13 @@ int Express::getPriorityLevel() {
 
 void Express::displayInfo() {
 	
-	cout << "\nid: " << getid()
-		<< "\nRecipient name: " << printrecipientName()
-		<< "\nDelivery cost: " << getdeliveryCost()
-		<< "\nPartner name: " << getpartnerName()
-		<< "\ncity: " << getcity()
-		<< "\nPriority level: " << getPriorityLevel();
+	cout << "Package ID: " << getid()<<endl
+		<< "Recipient: " << printrecipientName()<<endl
+		<< "Delivery Cost: " << getDeliveryCost()<<endl
+		<< "Partner: " << getpartnerName()<<endl
+		<< "City: " << getcity()<<endl
+		<< "Priority Level: " << getPriorityLevel()<< endl
+		<< "Shipping Date: "<<getshippingDateday()<<"/"<<getshippingDatemonth()<<"/"<<getshippingDateyear()<<endl;
 }
-
 
 Express::~Express(){}

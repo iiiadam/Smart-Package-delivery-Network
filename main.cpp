@@ -28,23 +28,23 @@ int main() {
     cout << p2 << endl;
 
     cout << "4. Setter and updateCost" << endl;
-    p1.setdeliveryCost(-10);
-    cout << "Cost after -10: " << p1.getdeliveryCost() << endl;
+    p1.setDeliveryCost(-10);
+    cout << "Cost after -10: " << p1.getDeliveryCost() << endl;
 
     double newCost = 300;    //or  enter newCost from user
     p1.updateCost(&newCost);
 
-    cout << "Cost after new cost: " << p1.getdeliveryCost() << endl;
+    cout << "Cost after new cost: " << p1.getDeliveryCost() << endl;
 
     cout << "5. Copy constructor" << endl;
 
     Package p3(p1);
-    p3.setrecipientName(newName);
+    p3.setRecipientName(newName);
 
-    p1.getrecipientName(arr);
+    p1.getRecipientName(arr);
     cout << "Original recipient: " << arr << endl;
 
-    p3.getrecipientName(arr);
+    p3.getRecipientName(arr);
     cout << "Copy recipient: " << arr << endl;
 
     cout << "6. Express" << endl;
@@ -54,11 +54,11 @@ int main() {
     e1.displayInfo();
 
     cout << "7. Maximum" << endl;
-/*
-    cout << "Max cost: " << getMaximum(p1.getdeliveryCost(), p2.getdeliveryCost()) << endl;
+
+    cout << "Max cost: " << getMaximum(p1.getDeliveryCost(), p2.getDeliveryCost()) << endl;
 
     cout << "Max priority: " << getMaximum(e1.getPriorityLevel(), 5) << endl;
-/*
+
     cout << "8. Container" << endl;
 
     Container<Package> packages;
@@ -83,7 +83,7 @@ int main() {
     packages.displayItems();
 
     cout << "END" << endl;
-    */
+    
     return 0;
 }
 

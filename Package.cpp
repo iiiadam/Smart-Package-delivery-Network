@@ -31,12 +31,12 @@ void Package::setid(int a) {
 	 id = a;
 }
 
-void Package::getrecipientName(char a[]) {
+void Package::getRecipientName(char a[]) {
 
 	strcpy(a, recipientName);
 }
 
-void Package::setrecipientName(char a[]) {
+void Package::setRecipientName(char a[]) {
 
 	strcpy(recipientName , a);
 }
@@ -46,9 +46,16 @@ const char* Package::printrecipientName() {
 	return recipientName;
 }
 
-Date Package::getshippingDate() {
+int Package::getshippingDateday(){
+	return shippingDate.day;
+}
 
-	return shippingDate;
+int Package::getshippingDatemonth(){
+	return shippingDate.month;
+}
+
+int Package::getshippingDateyear(){
+	return shippingDate.year;
 }
 
 void Package::setshippingDate(Date a) {
@@ -56,12 +63,12 @@ void Package::setshippingDate(Date a) {
 	shippingDate = a;
 }
 
-double Package::getdeliveryCost() {
+double Package::getDeliveryCost() {
 
 	return deliveryCost;
 }
 
-void Package::setdeliveryCost(double a) {
+void Package::setDeliveryCost(double a) {
 
 	if (Utils::validatePrice(a))
 	   deliveryCost = a;
@@ -73,10 +80,10 @@ void Package::updateCost(double* cost) {
 }
 
 ostream&operator<<(ostream& out, const Package& p) {
-	out<<"Package ID: "<< p.id;
-	out<<"\nRecipient Name: "<<p.recipientName;
-	out<<"\nshipping Date: "<<p.shippingDate.day << "/" << p.shippingDate.month << "/" << p.shippingDate.year;
-	out<<"\nDelivery Cost: "<<p.deliveryCost;
+	out<<"Package ID: "<< p.id<<endl;
+	out<<"Recipient : "<<p.recipientName<<endl;
+	out<<"shipping Date: "<<p.shippingDate.day << "/" << p.shippingDate.month << "/" << p.shippingDate.year<<endl;
+	out<<"Delivery Cost: "<<p.deliveryCost<<endl;
 	return out;
 }
 
@@ -102,7 +109,8 @@ Package::Package(Package& c1) {
 	id = c1.id;
 	strcpy(recipientName , c1.recipientName);
 	shippingDate = c1.shippingDate;
-	deliveryCost = Utils::validatePrice(c1.deliveryCost);
+	if(Utils::validatePrice(c1.deliveryCost))
+	deliveryCost = c1.deliveryCost;
 }
 
 Package::~Package() {
