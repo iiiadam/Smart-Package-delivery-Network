@@ -1,5 +1,4 @@
-#ifndef PACKAGE_H
-#define PACKAGE_H
+#pragma once
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -57,5 +56,3 @@ public:
 
 	friend istream& operator>>(istream& in, Package& p);
 };
-
-#endif
