@@ -1,5 +1,4 @@
-#ifndef DELIVERY_PARTNER_H
-#define DELIVERY_PARTNER_H
+#pragma once
 #include <iostream>
 using namespace std;
 
@@ -16,4 +15,3 @@ public:
 	DeliveryPartner();
 	~DeliveryPartner();
 };
-#endif
